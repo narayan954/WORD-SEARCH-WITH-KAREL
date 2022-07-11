@@ -240,14 +240,16 @@ class WorldBuilderApplication(tk.Frame):
                 self.canvas.redraw_walls(update=False)
                 self.canvas.redraw_karel()
 
-            elif event_type == tk.EventType.Motion:
-                if (avenue, street) != self.last_action_event_loc:
-                    self.last_action_event_loc = (avenue, street)
-                    fn(avenue, street, *args)
-                    self.canvas.redraw_corners(update=False)
-                    self.canvas.redraw_beepers(update=False)
-                    self.canvas.redraw_walls(update=False)
-                    self.canvas.redraw_karel()
+            elif (
+                event_type == tk.EventType.Motion
+                and (avenue, street) != self.last_action_event_loc
+            ):
+                self.last_action_event_loc = (avenue, street)
+                fn(avenue, street, *args)
+                self.canvas.redraw_corners(update=False)
+                self.canvas.redraw_beepers(update=False)
+                self.canvas.redraw_walls(update=False)
+                self.canvas.redraw_karel()
 
         event_type = event.type
         # only handle click events that happen in the world
