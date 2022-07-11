@@ -64,11 +64,11 @@ class Karel():
 	@property
 	def street(self):
 		"""
-		This property can be used to access Karel's current street location. 
-		
+		This property can be used to access Karel's current street location.
+
 		Parameters: None
 		Returns:
-			street (int) - The current street Karel is standing on. 
+			street (int) - The current street Karel is standing on.
 		"""
 		return self._street
 
@@ -86,11 +86,11 @@ class Karel():
 	@property
 	def direction(self):
 		"""
-		This property can be used to access Karel's current direction. 
-		
+		This property can be used to access Karel's current direction.
+
 		Parameters: None
 		Returns:
-			street (Direction[Enum]) - The current direction Karel is facing. 
+			street (Direction[Enum]) - The current direction Karel is facing.
 		"""
 		return self._direction
 
@@ -108,11 +108,11 @@ class Karel():
 	@property
 	def num_beepers(self):
 		"""
-		This property can be used to access Karel's current number of beepers. 
-		
+		This property can be used to access Karel's current number of beepers.
+
 		Parameters: None
 		Returns:
-			num_beepers (int) - The current number of beepers Karel has. 
+			num_beepers (int) - The current number of beepers Karel has.
 		"""
 		return self._num_beepers
 
@@ -126,7 +126,7 @@ class Karel():
 		Returns: None
 		"""		
 		self._num_beepers = val
-	
+
 	def reset_state(self):
 		"""
 		This function is used to reset Karel's location and direction to the original

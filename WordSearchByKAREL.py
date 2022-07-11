@@ -7,9 +7,9 @@ from karel.stanfordkarel import *
 File: WordSearchByKAREL.py
 --------------------
 The overall aim of this program is for Karel to create a word
-search with a high degree of randomness and then have him find 
-the hidden words. In this version which is appended due to 
-humanistic limitations, Karel knows four words; KAREL, PYTHON, 
+search with a high degree of randomness and then have him find
+the hidden words. In this version which is appended due to
+humanistic limitations, Karel knows four words; KAREL, PYTHON,
 CHOCO and SHREYASI (That's me :D). Once the human user is given
 a chance to try and solve the puzzle, Karel will search out all
 the words he knows. Overall I found this task especially
@@ -19,25 +19,25 @@ of the whole map which is required in creating a word search.
  Watch Karel create and solve his own word search!
 
  ****To Hide The Words*****
- 
+
  One of the most interesting parts about creating an algorithm
  for this word search was learning how non-systematic word
  searches actually are. When creating a word search there is no
  simple equation that can be applied. While they can be placed
- completely randomly one at a time, one of the short failings of 
+ completely randomly one at a time, one of the short failings of
  this method is that it could allow for the creation of a game
  where there is no space to possibly fit the last few words
- (especially on a 10 by 8 map). To overcome this problem I 
+ (especially on a 10 by 8 map). To overcome this problem I
  taught Karel a way of hiding the words which combines
- strategic placing and still maintains a good degree of randomness. 
- Of course this is also helped by the fact that four 
+ strategic placing and still maintains a good degree of randomness.
+ Of course this is also helped by the fact that four
  words are not too many to hide :).
 
  First Karel hides the word SHREYASI. He places it upright and
  randomly chooses a column to put it in. However, because of
  the length of this words I made him strongly favor the sides
  of the game as this caused less disruption in the placing of
- the other words. 
+ the other words.
 
  To place CHOCO, Karel randomly chooses a row, checks where
  SHREYASI is placed and with his remaining options randomly
@@ -69,7 +69,7 @@ of the whole map which is required in creating a word search.
  in existence it would look for a brand new location for the words
  while remembering to put the error beeper away first of course :).
  Though this process may seem simple, keeping the error beepers
- in place without Karel confusing an error beeper with the 
+ in place without Karel confusing an error beeper with the
  identification beeper of a letter was harder than it seemed
  especially due to Karel's lack of coordinates. Its also important
  to note that while Karel places PYTHON and KAREL together he is
@@ -78,7 +78,7 @@ of the whole map which is required in creating a word search.
  ****
 
  ****To Find The Words****
- 
+
  As you may notice, in the bottom left hand side of each letter
  is a pile of beepers. Seeing as Karel, until this moment was
  illiterate, this is how he identified letters. Each letter
@@ -92,14 +92,14 @@ of the whole map which is required in creating a word search.
  and this is not his letter. If there are still beepers he will
  move one more beeper over. If at this point there are no more
  beepers he knows that before there were exactly 8 beepers on the
- spot and this is the word he was looking for. Being the well 
+ spot and this is the word he was looking for. Being the well
  trained robot he is, Karel will always return the beepers from
  where he got them.
 
  The actual searching for specific words was by far the most code
  consuming function. This is because it required large amounts of
  deeply nested codes and while much of the code was similar it could
- not be simplified because of the restrictions placed on this 
+ not be simplified because of the restrictions placed on this
  assignment.
 
  To make life easier I made each word have a designated direction.
@@ -115,20 +115,20 @@ of the whole map which is required in creating a word search.
  Once Karel was sufficiently convinced he had found the word he
  made an attempt to circle it. Due to the very large nature of
  the pixels and my lack of intrinsic aesthetic skills, the circling
- doesnt always look as professional as I would like it to. 
- 
+ doesnt always look as professional as I would like it to.
+
  ****
 
  ****How To Run****
- 
+
  To run word search Karel you MUST run it on a 54x61 blank world.
 
- There are two ways of running Word Search Karel; the fast way 
+ There are two ways of running Word Search Karel; the fast way
  and the slow way.
 
  In the slow way you can see Karel's general movements and from
  this get an insight into the algorithms which occur behind the
- scenes in creating this puzzle. 
+ scenes in creating this puzzle.
 
  In the fast version, it is supposed to simulate an actual word
  search game. It will draw the puzzle in what seems to be an
@@ -139,9 +139,9 @@ of the whole map which is required in creating a word search.
  full speed
 
  ****Final Note****
- 
+
  A final note on style. In this program I tried my best to keep
- a readable code which was efficient and well programmed. 
+ a readable code which was efficient and well programmed.
  However due to the long nature of a complicated program in
  Karel and the absolute necessity of deeply embedded clauses
  it was not always as stylistic as I would have liked it to be.
@@ -174,7 +174,7 @@ def main():
     2. Creates the puzzle
     3. Solves the puzzle
     4. Displays the end message
-    
+
     """
     text_val_1 = "Welcome to the World of KAREL. Here, KAREL is going to perform Word Search. There are four words " \
                  "hidden in a grid consisting of random alphabets. Dive right in to check if our little KAREL can do it"
@@ -525,7 +525,7 @@ def write_SHREYASI():
 
 
     Draws a single letter at a time, then moves to the next spot to write the next letter...
-    
+
     """
     draw_S()
     move_to_next_letter()
@@ -550,7 +550,7 @@ def write_BY():
     Writes the word "BY" as a part of the Introductory message
 
     Draws a single letter at a time, then moves to the next spot to write the next letter...
-    
+
     """
     draw_B()
     move_to_next_letter()
@@ -570,7 +570,7 @@ def delay():
 def move_up():
     """
     This function is used by KAREL to move up to the next spot for writing a letter along a column
-    
+
     """
     turn_left()
     for i in range(8):
@@ -583,7 +583,7 @@ def write_SEARCH():
     Writes the word "SEARCH" as a part of the Introductory message
 
     Draws a single letter at a time, then moves to the next spot to write the next letter...
-    
+
     """
     draw_S()
     move_to_next_letter()
@@ -604,7 +604,7 @@ def write_WORD():
     Writes the word "WORD" as a part of the Introductory message
 
     Draws a single letter at a time, then moves to the next spot to write the next letter...
-    
+
     """
     draw_W()
     move_to_next_letter()
@@ -621,7 +621,7 @@ def write_TO():
     Writes the word "TO" as a part of the Introductory message
 
     Draws a single letter at a time, then moves to the next spot to write the next letter...
-    
+
     """
     draw_T()
     move_to_next_letter()
@@ -637,7 +637,7 @@ def write_KAREL():
     Places the word "KAREL" along a row
 
     Draws a single letter at a time, then moves to the next spot to write the next letter...
-    
+
     """
     draw_K()
     move_to_next_letter()
@@ -656,7 +656,7 @@ def write_WELCOME():
     Writes the word "WELCOME" as a part of the Introductory message
 
     Draws a single letter at a time, then moves to the next spot to write the next letter...
-    
+
     """
     draw_W()
     move_to_next_letter()
