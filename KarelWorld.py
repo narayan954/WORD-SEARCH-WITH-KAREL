@@ -171,7 +171,7 @@ class KarelWorld():
 								continue
 						elif keyword == "beeperbag":
 							# handle the edge case where Karel has infinite beepers
-							if param == "infinity" or param == "infinite":
+							if param in ("infinity", "infinite"):
 								val = INFINITY
 						elif keyword == "color":
 							# TODO: add check for valid color? 
