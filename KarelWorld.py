@@ -95,7 +95,7 @@ class KarelWorld():
 	@property
 	def karel_starting_beeper_count(self):
 		return self._karel_starting_beeper_count
-	
+
 	@property
 	def init_speed(self):
 		return self._init_speed
@@ -111,7 +111,7 @@ class KarelWorld():
 	@property
 	def num_avenues(self):
 		return self._num_avenues
-	
+
 	@num_avenues.setter
 	def num_avenues(self, val):
 		self._num_avenues = val
@@ -123,11 +123,11 @@ class KarelWorld():
 	@property
 	def corner_colors(self):
 		return self._corner_colors
-	
+
 	@property
 	def walls(self):
 		return self._walls
-	
+
 	def load_from_file(self):
 		def parse_line(line):
 			# Ignore blank lines and lines with no comma delineator
@@ -251,7 +251,7 @@ class KarelWorld():
 			self._walls.remove(wall)
 		if alt_wall in self._walls:
 			self._walls.remove(alt_wall)
-		
+
 	def get_alt_wall(self, wall):
 		if wall.direction == Direction.NORTH:
 			return Wall(wall.avenue, wall.street + 1, Direction.SOUTH)
@@ -290,7 +290,7 @@ class KarelWorld():
 		"""
 		TODO: Do better decomp to not just copy constructor
 		"""
-		
+
 		self._beepers = collections.defaultdict(int)
 		self._corner_colors = collections.defaultdict(lambda: "")
 		self._walls = set()
@@ -330,7 +330,7 @@ class KarelWorld():
 
 			# Next, output Karel information
 			f.write(f"Karel: ({karel.avenue}, {karel.street}); {DIRECTIONS_MAP_INVERSE[karel.direction]}\n")
-			
+
 			# Finally, output beeperbag info
 			beeper_output = karel.num_beepers if karel.num_beepers >= 0 else "INFINITY"
 			f.write(f"BeeperBag: {beeper_output}\n")
