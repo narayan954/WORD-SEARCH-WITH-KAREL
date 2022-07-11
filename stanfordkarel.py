@@ -31,99 +31,99 @@ in a given world.
 """
 
 def move():
-	pass
+	raise NotImplementedError()
 
 
 def turn_left():
-	pass
+	raise NotImplementedError()
 
 
 def put_beeper():
-	pass
+	raise NotImplementedError()
 
 
 def pick_beeper():
-	pass
+	raise NotImplementedError()
 
 
 def front_is_clear():
-	pass
+	raise NotImplementedError()
 
 
 def front_is_blocked():
-	pass
+	raise NotImplementedError()
 
 
 def left_is_clear():
-	pass
+	raise NotImplementedError()
 
 
 def left_is_blocked():
-	pass
+	raise NotImplementedError()
 
 
 def right_is_clear():
-	pass
+	raise NotImplementedError()
 
 
 def right_is_blocked():
-	pass
+	raise NotImplementedError()
 
 
 def beepers_present():
-	pass
+	raise NotImplementedError()
 
 
 def no_beepers_present():
-	pass
+	raise NotImplementedError()
 
 
 def beepers_in_bag():
-	pass
+	raise NotImplementedError()
 
 
 def no_beepers_in_bag():
-	pass
+	raise NotImplementedError()
 
 
 def facing_north():
-	pass
+	raise NotImplementedError()
 
 
 def not_facing_north():
-	pass
+	raise NotImplementedError()
 
 
 def facing_east():
-	pass
+	raise NotImplementedError()
 
 
 def not_facing_east():
-	pass
+	raise NotImplementedError()
 
 
 def facing_west():
-	pass
+	raise NotImplementedError()
 
 
 def not_facing_west():
-	pass
+	raise NotImplementedError()
 
 
 def facing_south():
-	pass
+	raise NotImplementedError()
 
 
 def not_facing_south():
-	pass
+	raise NotImplementedError()
 
 
 def paint_corner():
-	pass
+	raise NotImplementedError()
 
 
 def corner_color_is():
-	pass
+	raise NotImplementedError()
 
 
 # Defined constants for ease of use by students when coloring corners
