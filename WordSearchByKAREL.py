@@ -282,10 +282,7 @@ def write_THANK():
 
 
 def solve_puzzle():
-    """
-    Solves the puzzle by finding the four words and creating a boundary line around them
-
-    """
+    """Solves the puzzle by finding the four words and creating a boundary line around them"""
     move_up()
     create_boundary(8, 'row')
     move_to_next_letter()
@@ -425,10 +422,7 @@ def create_puzzle():
 
 
 def move_down():
-    """
-    This function is used by KAREL to move down to the next spot for writing a letter along a column
-
-    """
+    """This function is used by KAREL to move down to the next spot for writing a letter along a column"""
     turn_right()
     for i in range(8):
         move()
@@ -559,19 +553,13 @@ def write_BY():
 
 
 def delay():
-    """
-    This function is basically meant to delay the timing between the four basic processes in main() function
-
-    """
+    """This function is basically meant to delay the timing between the four basic processes in main() function"""
     for i in range(5000):
         turn_left()
 
 
 def move_up():
-    """
-    This function is used by KAREL to move up to the next spot for writing a letter along a column
-
-    """
+    """This function is used by KAREL to move up to the next spot for writing a letter along a column"""
     turn_left()
     for i in range(8):
         move()
@@ -676,10 +664,7 @@ def write_WELCOME():
 
 
 def reach_starting_point():
-    """
-    Reaches the starting point i.e. the 1st row and 1st column of KAREL's world
-
-    """
+    """Reaches the starting point i.e. the 1st row and 1st column of KAREL's world"""
     move_to_wall()
     turn_right()
     move_to_wall()
@@ -704,10 +689,7 @@ def clear_one_row():
 
 
 def reach_first_column():
-    """
-    KAREL reaches the first column
-
-    """
+    """KAREL reaches the first column"""
     turn_around()
     move_to_wall()
     turn_right()
@@ -776,10 +758,7 @@ def randomly_draw_letters():
 
 
 def draw_dots():
-    """
-    KAREL draws three dots "..." to enhance the beauty of a word in few cases
-
-    """
+    """KAREL draws three dots "..." to enhance the beauty of a word in few cases"""
     for i in range(2):
         paint_corner(PINK)
         move()
