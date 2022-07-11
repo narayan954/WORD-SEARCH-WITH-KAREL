@@ -15,7 +15,7 @@ from karel.kareldefinitions import *
 from karel.KarelCanvas import KarelCanvas
 from time import sleep
 from tkinter.filedialog import askopenfilename
-from tkinter.messagebox import showerror, showwarning
+from tkinter.messagebox import showwarning
 import os
 import traceback as tb
 import inspect
