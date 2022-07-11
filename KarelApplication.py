@@ -105,7 +105,8 @@ class KarelApplication(tk.Frame):
 
 		self.master.config(menu=menubar)
 
-	def quit(self, event):
+	@staticmethod
+	def quit(event):
 		sys.exit(0)
 
 	def set_icon(self, icon):

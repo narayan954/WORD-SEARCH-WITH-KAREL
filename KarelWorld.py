@@ -251,7 +251,8 @@ class KarelWorld():
 		if alt_wall in self._walls:
 			self._walls.remove(alt_wall)
 
-	def get_alt_wall(self, wall):
+	@staticmethod
+	def get_alt_wall(wall):
 		if wall.direction == Direction.NORTH:
 			return Wall(wall.avenue, wall.street + 1, Direction.SOUTH)
 		if wall.direction == Direction.SOUTH:
