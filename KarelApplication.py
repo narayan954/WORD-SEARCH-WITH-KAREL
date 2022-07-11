@@ -155,7 +155,7 @@ class KarelApplication(tk.Frame):
 
 		self.load_world_button = tk.Button(self, highlightthickness=0, text="Load World", command=self.load_world)
 		self.load_world_button.grid(column=0, row=2, padx=PAD_X, pady=PAD_Y, sticky="ew")
-	
+
 	def create_status_label(self):
 		"""
 		This function creates the status label at the bottom of the window.
@@ -248,7 +248,7 @@ class KarelApplication(tk.Frame):
 			# Only display frames generated within the student's code
 			if self.base_filename in filename:
 				display_frames.append((frame, lineno))
-		
+
 		print(("".join(tb.format_list(tb.StackSummary.extract(display_frames)))).strip())
 		print(f"{type(e).__name__}: {str(e)}")
 

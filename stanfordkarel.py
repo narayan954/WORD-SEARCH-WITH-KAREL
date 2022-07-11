@@ -101,7 +101,7 @@ def facing_east():
 def not_facing_east():
 	pass
 
-	
+
 def facing_west():
 	pass
 
