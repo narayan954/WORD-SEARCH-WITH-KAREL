@@ -187,7 +187,6 @@ class KarelWorld():
 
 			# skip invalid lines (comments, incorrectly formatted, invalid keyword)
 			if not is_valid:
-				# print(f"Ignoring line {i} of world file: {line.strip()}")
 				continue
 
 			# TODO: add error detection for keywords with insufficient parameters
