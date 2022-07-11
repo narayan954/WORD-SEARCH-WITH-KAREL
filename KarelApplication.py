@@ -202,7 +202,6 @@ class KarelApplication(tk.Frame):
 		file with specific commands relating to the Karel object that exists
 		in the world.
 		"""
-
 		self.mod.turn_left = self.karel_action_decorator(self.karel.turn_left)
 		self.mod.move = self.karel_action_decorator(self.karel.move)
 		self.mod.pick_beeper = self.beeper_action_decorator(self.karel.pick_beeper)

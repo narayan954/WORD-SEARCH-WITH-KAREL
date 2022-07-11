@@ -286,7 +286,6 @@ class KarelWorld():
 
 	def reload_world(self, filename=None):
 		"""TODO: Do better decomp to not just copy constructor"""
-
 		self._beepers = collections.defaultdict(int)
 		self._corner_colors = collections.defaultdict(lambda: "")
 		self._walls = set()
