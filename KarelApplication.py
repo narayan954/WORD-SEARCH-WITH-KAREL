@@ -157,9 +157,7 @@ class KarelApplication(tk.Frame):
 		self.load_world_button.grid(column=0, row=2, padx=PAD_X, pady=PAD_Y, sticky="ew")
 
 	def create_status_label(self):
-		"""
-		This function creates the status label at the bottom of the window.
-		"""
+		"""This function creates the status label at the bottom of the window."""
 		self.status_label = tk.Label(self.master, text="Welcome to Karel!", bg=LIGHT_GREY)
 		self.status_label.grid(row=1, column=0, columnspan=2)
 

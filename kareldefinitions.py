@@ -146,9 +146,7 @@ DIRECTION_DELTA_MAP = {
 
 
 class KarelException(Exception):
-	"""
-	The following classes define Karel-specific exceptions
-	"""
+	"""The following classes define Karel-specific exceptions"""
 
 	def __init__(self, avenue, street, direction, message):
 		self.avenue = avenue
