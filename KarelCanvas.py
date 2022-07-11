@@ -60,8 +60,6 @@ class KarelCanvas(tk.Canvas):
     def draw_world(self):
         self.init_geometry_values()
         self.draw_bounding_rectangle()
-        # self.label_axes()
-        # self.draw_corners()
         self.draw_all_beepers()
         self.draw_all_walls()
 
